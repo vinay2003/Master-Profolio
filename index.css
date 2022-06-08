@@ -1,0 +1,361 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+}
+body{
+  display: block;
+  height: 100%;
+}
+.name{
+  font-size: 3rem;
+  letter-spacing: 0.1rem;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 0;
+  text-align: center;
+}
+nav {
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+
+nav .logo {
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+
+nav .logo:hover{
+  color: #ee2c2c;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  color: #111;
+  background: #fff;
+}
+
+nav .menu-btn i {
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  *{
+    box-sizing: border-box;
+
+  }
+  nav {
+      padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i {
+      display: block;
+  }
+
+  #click:checked~.menu-btn i:before {
+      content: "\f00d";
+  }
+
+  nav ul {
+      position: absolute;
+      top: 80px;
+      left: -100%;
+      background-color: black;
+      height: 100vh;
+      width: 100%;
+      text-align: center;
+      display: block;
+      transition: all 0.3s ease;
+  }
+
+  #click:checked~ul {
+      left: 0;
+  }
+
+  nav ul li {
+      width: 100%;
+      margin: 40px 0;
+  }
+
+  nav ul li a {
+      width: 100%;
+      margin-left: -100%;
+      display: block;
+      font-size: 20px;
+      transition: none;
+  }
+
+  #click:checked~ul li a {
+      margin-left: 0px;
+  }
+
+  nav ul li a.active,
+  nav ul li a:hover {
+      background: none;
+      color: cyan;
+  }
+  .img{
+      opacity: 1;
+  }  
+}
+/* ---------->HEADER<---------- */
+.header {
+  padding: 9px;
+  margin: 98px;
+  text-transform: uppercase;
+}
+/* ---------->BACKGROUND IMAGE<---------- */
+.img {
+  /* background-image: url('background2.jpg'); */
+  display: block;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("img/background2.jpg");
+  background-size: cover;
+  height: auto;
+  color: white;
+}
+/* ---------->H2 HEADER<---------- */
+h2 {
+  font-size: 4em;
+  font-weight: 500;
+  color: rgb(65, 118, 134);
+  letter-spacing: 5px;
+  cursor: pointer;
+}
+h2 span {
+  transition: 0.5s;
+}
+h2:hover span:nth-child(1) {
+  margin-right: 10px;
+}
+h2:hover span:nth-child(1):after {
+  content: "  A";
+}
+
+h2:hover span:nth-child(2) {
+  margin-left: 40px;
+}
+h2:hover span {
+  color: #fff;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff,
+    0 0 120px #fff;
+}
+
+/* ---------->SOME TEXT<---------- */
+h3 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+p {
+  margin: 9%;
+  text-align: left;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.imp {
+  margin: 3%;
+}
+.cl {
+  margin: 2% 9%;
+  text-align: left;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: white;
+}
+@media (max-width: 812px) {
+  h2 {
+    font-size: 4em;
+    font-weight: 500;
+    color: rgb(65, 118, 134);
+    letter-spacing: 5px;
+    cursor: pointer;
+    box-sizing: border-box;
+
+  }
+  h2 span {
+    transition: 0.5s;
+  }
+  h2:hover span:nth-child(1) {
+    margin-right: 5px;
+  }
+  h2:hover span:nth-child(1):after {
+    content: "'";
+  }
+
+  h2:hover span:nth-child(2) {
+    margin-left: 10px;
+  }
+  h2:hover span {
+    color: #fff;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff,
+      0 0 120px #fff;
+  }
+
+  p {
+    font-size: 1.2em;
+    padding: 12px 12px;
+    font-weight: bold;
+  }
+  h4 {
+    margin: 1%;
+    justify-content: left;
+    padding: 12px 12px;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  .imp {
+    margin: 1%;
+    padding: 12px 12px;
+  }
+  .cl {
+    margin: 1% 5%;
+    text-align: justify;
+    padding: 12px 12px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+  }
+}
+@media (max-width: 500px) {
+  .header {
+    padding: 6px;
+    margin: 80px;
+    text-transform: uppercase;
+  }
+  h2 {
+    font-size: 2.8em;
+    font-weight: 500;
+    color: rgb(65, 118, 134);
+    letter-spacing: 2px;
+    cursor: pointer;
+  }
+  h2 span {
+    transition: 0.5s;
+  }
+  h2:hover span:nth-child(1) {
+    margin-right: 2px;
+  }
+  h2:hover span:nth-child(1):after {
+    content: "'";
+  }
+
+  h2:hover span:nth-child(2) {
+    margin-left: 6px;
+  }
+  h2:hover span {
+    color: #fff;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff,
+      0 0 120px #fff;
+  }
+  p {
+    font-size: 1.2em;
+    padding: 9px 9px;
+  }
+  h4 {
+    margin: 1%;
+    justify-content: left;
+    padding: 9px 9px;
+    font-size: 9px;
+  }
+  .imp {
+    margin: 1%;
+    padding: 10px 10px;
+  }
+  .cl {
+    margin: 1% 5%;
+    text-align: justify;
+    padding: 9px 9px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+/* ---------->FOOTER BACKGROUND COLOR<---------- */
+footer {
+  background-color: white;
+  color: black;
+}
+.social_icon {
+  list-style: none;
+  text-decoration: none;
+  justify-content: center;
+  display: flex;
+  font-size: 31px;
+  cursor: pointer;
+  height: auto;
+  padding: 50px;
+}
+/* ---------->SOCIAL ICON<---------- */
+.social_icon li a {
+  margin: 30px;
+  color: black;
+}
+.instagram:hover{
+  color: rgb(209, 29, 59);
+  transition: 1s;
+}
+.github:hover{
+  color: darkblue;
+  transition: 1s;
+}
+.twitter:hover{
+  color: skyblue;
+  transition: 1s;
+}
+.linkedin:hover{
+  color: #0077b5;
+  transition: 1s;
+}
+/* ---------->FOOTER NAVIGATION BAR<---------- */
+.footer{
+  text-align: center;
+  font-size: 1em;
+  font-weight: bold;
+}
+@media (max-width:600px) {
+  .social_icon {
+    font-size: 28px;
+    padding: 45px;
+  }
+}
